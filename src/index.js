@@ -12,6 +12,7 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    title: "API to Sheet",
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
