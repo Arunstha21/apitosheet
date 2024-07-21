@@ -1,6 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('node:path');
-const {runGsApi, stopGsApi} = require('./sheet');
+const Gsapi = require('./sheet');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
@@ -18,17 +18,9 @@ const createWindow = () => {
   });
 
   // and load the index.html of the app.
-  ipcMain.handle('rungsapi', (req, data) =>{
-    const run = runGsApi(data);
-    return run;
-  })
+  ipcMain.handle('gsapi', (event, data) => Gsapi(data));
 
-  ipcMain.handle('stopgsapi', (req, data) =>{
-    stopGsApi()
-  })
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
-  // Open the DevTools.
-  mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished

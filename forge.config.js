@@ -9,7 +9,11 @@ module.exports = {
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
-      config: {},
+      config: {
+        authors: 'Arun Shrestha',
+        exe: `apitosheet.exe`,
+        name: 'apitosheet',
+      },
     },
     {
       name: '@electron-forge/maker-zip',

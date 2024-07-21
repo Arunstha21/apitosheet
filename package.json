@@ -9,7 +9,8 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "dist" : "electron-builder --win --x64"
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.4.0",
@@ -22,7 +23,7 @@
     "@electron/fuses": "^1.8.0",
     "@electron/packager": "^18.3.3",
     "electron": "31.2.1",
-    "electron-packager": "^17.1.2"
+    "electron-builder": "^24.13.3"
   },
   "keywords": [],
   "author": {
@@ -31,9 +32,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "axios": "^1.7.2",
     "electron-squirrel-startup": "^1.0.1",
-    "exceljs": "^4.4.0",
     "fs": "^0.0.1-security",
     "googleapis": "^140.0.1"
   }

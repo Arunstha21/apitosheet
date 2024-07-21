@@ -7,7 +7,7 @@ yarn-error.log*
 lerna-debug.log*
 
 src/key.json
-
+dist
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
@@ -33,7 +33,7 @@ coverage
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
-
+build
 # Dependency directories
 node_modules/
 jspm_packages/

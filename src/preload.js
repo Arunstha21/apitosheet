@@ -5,7 +5,5 @@ const {contextBridge, ipcRenderer} = require('electron')
 
 contextBridge.exposeInMainWorld('gsheet', {
     title: "Sheet to API",
-    rungsapi: (data) => ipcRenderer.invoke('rungsapi',data),
-    stopgsapi: () => ipcRenderer.invoke('stopgsapi'),
-
+    gsapi: (data) => ipcRenderer.invoke('gsapi',data),
 })
